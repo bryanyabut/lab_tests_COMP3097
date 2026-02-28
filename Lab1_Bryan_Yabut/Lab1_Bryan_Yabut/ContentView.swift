@@ -49,6 +49,15 @@ struct ContentView: View {
                             .italic()
                             .foregroundColor(Color(red: 0.0, green: 0.6, blue: 0.6))
                     }
+                    
+                    Button(action: {
+                        checkAnswer(userSelectedPrime: false)
+                    }) {
+                        Text("non Prime")
+                            .font(.system(size: 30, weight: .light, design: .serif))
+                            .italic()
+                            .foregroundColor(Color(red: 0.0, green: 0.6, blue: 0.6))
+                    }
 
                 }
             }
