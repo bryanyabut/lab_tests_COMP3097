@@ -40,6 +40,17 @@ struct ContentView: View {
                     .italic()
                     .foregroundColor(Color(red: 0.0, green: 0.6, blue: 0.6))
                     .padding()
+                VStack(spacing: 30){
+                    Button(action: {
+                        checkAnswer(userSelectedPrime: true)
+                    }) {
+                        Text("Prime")
+                            .font(.system(size: 30, weight: .light, design: .serif))
+                            .italic()
+                            .foregroundColor(Color(red: 0.0, green: 0.6, blue: 0.6))
+                    }
+
+                }
             }
         }
         .padding()
