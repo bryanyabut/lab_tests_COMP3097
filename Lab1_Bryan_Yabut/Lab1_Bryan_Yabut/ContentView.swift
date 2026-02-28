@@ -136,6 +136,13 @@ struct ContentView: View {
         
         processRoundEnd()
     }
+    
+    func handleTimeout() {
+        wrongAttempts += 1
+        showFeedback(isCorrect: false)
+        processRoundEnd()
+    }
+    
 }
 
 #Preview {
