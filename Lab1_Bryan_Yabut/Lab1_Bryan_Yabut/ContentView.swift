@@ -108,6 +108,21 @@ struct ContentView: View {
             Text("Correct: \(correctAttempts)\nWrong: \(wrongAttempts)")
         }
     }
+    
+    func checkPrimality() {
+        if currentNumber <= 1 { isPrimeNumber = false; return }
+        if currentNumber <= 3 { isPrimeNumber = true; return }
+        
+        var i = 2
+        while i * i <= currentNumber {
+            if currentNumber % i == 0 {
+                isPrimeNumber = false
+                return
+            }
+            i += 1
+        }
+        isPrimeNumber = true
+    }
 }
 
 #Preview {
