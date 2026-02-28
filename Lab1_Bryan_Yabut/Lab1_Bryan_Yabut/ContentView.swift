@@ -88,6 +88,19 @@ struct ContentView: View {
         .onAppear {
             checkPrimality()
         }
+        
+        .onReceive(timer) { _ in
+            guard !showScoreAlert else { return }
+            
+            if timeRemaining > 0 {
+                timeRemaining -= 1
+            } else {
+
+                handleTimeout()
+            }
+        }
+        
+        
     }
 }
 
