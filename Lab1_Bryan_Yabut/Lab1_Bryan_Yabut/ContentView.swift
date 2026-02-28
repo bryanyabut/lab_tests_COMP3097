@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct ContentView: View {
+    // Game State
+    @State private var currentNumber: Int = Int.random(in: 2...99)
+    @State private var isPrimeNumber: Bool = false
+    
     var body: some View {
         VStack {
             Image(systemName: "globe")
