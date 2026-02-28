@@ -75,6 +75,14 @@ struct ContentView: View {
                 }
                 
                 Spacer()
+                
+                HStack {
+                    Text("\(totalAttempts)")
+                        .foregroundColor(.red)
+                        .font(.caption)
+                        .padding()
+                    Spacer()
+                }
             }
         }
         .padding()
