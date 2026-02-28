@@ -100,7 +100,13 @@ struct ContentView: View {
             }
         }
         
-        
+        .alert("Score Report", isPresented: $showScoreAlert) {
+            Button("OK", role: .cancel) {
+                resetGameValues()
+            }
+        } message: {
+            Text("Correct: \(correctAttempts)\nWrong: \(wrongAttempts)")
+        }
     }
 }
 
