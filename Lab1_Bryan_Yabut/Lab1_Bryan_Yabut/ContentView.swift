@@ -143,6 +143,15 @@ struct ContentView: View {
         processRoundEnd()
     }
     
+    func showFeedback(isCorrect: Bool) {
+        if isCorrect {
+            feedbackImage = "checkmark"
+            feedbackColor = .green
+        } else {
+            feedbackImage = "multiply"
+            feedbackColor = .red
+        }
+    }
 }
 
 #Preview {
