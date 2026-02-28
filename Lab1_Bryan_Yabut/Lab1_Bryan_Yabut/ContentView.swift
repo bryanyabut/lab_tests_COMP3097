@@ -16,7 +16,11 @@ struct ContentView: View {
     @State private var correctAttempts: Int = 0
     @State private var wrongAttempts: Int = 0
     @State private var totalAttempts: Int = 0
-        
+    
+    // UI State
+    @State private var feedbackImage: String? = nil
+    @State private var feedbackColor: Color = .clear
+    @State private var showScoreAlert: Bool = false
     
     var body: some View {
         VStack {
