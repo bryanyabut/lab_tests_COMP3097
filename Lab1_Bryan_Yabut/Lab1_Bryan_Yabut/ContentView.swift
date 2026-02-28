@@ -32,6 +32,11 @@ struct ContentView: View {
         ZStack {
             Color.white.edgesIgnoringSafeArea(.all)
             
+            Vstack(spacing: 40){
+                Spacer().frame(height: 50)
+                
+                
+            }
         }
         .padding()
     }
