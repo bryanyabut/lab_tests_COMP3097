@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+internal import Combine
 
 struct ContentView: View {
     // Game State
@@ -21,6 +22,11 @@ struct ContentView: View {
     @State private var feedbackImage: String? = nil
     @State private var feedbackColor: Color = .clear
     @State private var showScoreAlert: Bool = false
+    
+    // Timer State
+    @State private var timeRemaining = 5
+    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+
     
     var body: some View {
         VStack {
