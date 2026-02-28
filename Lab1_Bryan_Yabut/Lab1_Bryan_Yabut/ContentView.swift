@@ -12,6 +12,12 @@ struct ContentView: View {
     @State private var currentNumber: Int = Int.random(in: 2...99)
     @State private var isPrimeNumber: Bool = false
     
+    // Statistics
+    @State private var correctAttempts: Int = 0
+    @State private var wrongAttempts: Int = 0
+    @State private var totalAttempts: Int = 0
+        
+    
     var body: some View {
         VStack {
             Image(systemName: "globe")
