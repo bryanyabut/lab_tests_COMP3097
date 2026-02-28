@@ -123,6 +123,19 @@ struct ContentView: View {
         }
         isPrimeNumber = true
     }
+    
+    func checkAnswer(userSelectedPrime: Bool) {
+        
+        if userSelectedPrime == isPrimeNumber {
+            correctAttempts += 1
+            showFeedback(isCorrect: true)
+        } else {
+            wrongAttempts += 1
+            showFeedback(isCorrect: false)
+        }
+        
+        processRoundEnd()
+    }
 }
 
 #Preview {
