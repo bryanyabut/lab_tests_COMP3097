@@ -152,8 +152,34 @@ struct ContentView: View {
             feedbackColor = .red
         }
     }
+    func processRoundEnd() {
+        totalAttempts += 1
+        
+        if totalAttempts % 10 == 0 {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                showScoreAlert = true
+            }
+        } else {
+            prepareNextRound()
+        }
+    }
+    
+    func prepareNextRound() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            feedbackImage = nil
+            currentNumber = Int.random(in: 2...99)
+            checkPrimality()
+            timeRemaining = 5
+        }
+    }
+    
+    func resetGameValues() {
+        prepareNextRound()
+    }
 }
 
-#Preview {
-    ContentView()
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
 }
