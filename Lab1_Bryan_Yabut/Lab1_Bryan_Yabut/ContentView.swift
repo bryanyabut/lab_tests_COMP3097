@@ -60,6 +60,21 @@ struct ContentView: View {
                     }
 
                 }
+                
+                if let imageName = feedbackImage {
+                    Image(systemName: imageName)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 80, height: 80)
+                        .foregroundColor(feedbackColor)
+                        .transition(.scale)
+                } else {
+                    Rectangle()
+                        .fill(Color.clear)
+                        .frame(width: 80, height: 80)
+                }
+                
+                Spacer()
             }
         }
         .padding()
