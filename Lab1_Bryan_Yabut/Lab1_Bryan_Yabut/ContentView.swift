@@ -32,10 +32,14 @@ struct ContentView: View {
         ZStack {
             Color.white.edgesIgnoringSafeArea(.all)
             
-            Vstack(spacing: 40){
+            VStack(spacing: 40){
                 Spacer().frame(height: 50)
                 
-                
+                Text("\(currentNumber)")
+                    .font(.system(size: 80, weight: .thin, design: .serif))
+                    .italic()
+                    .foregroundColor(Color(red: 0.0, green: 0.6, blue: 0.6))
+                    .padding()
             }
         }
         .padding()
