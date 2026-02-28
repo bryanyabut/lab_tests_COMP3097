@@ -85,7 +85,9 @@ struct ContentView: View {
                 }
             }
         }
-        .padding()
+        .onAppear {
+            checkPrimality()
+        }
     }
 }
 
